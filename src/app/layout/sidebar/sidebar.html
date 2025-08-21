@@ -1,0 +1,105 @@
+
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand -->
+  <a routerLink="/" class="brand-link">
+    <img src="assets/dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">ProyectaLean</span>
+  </a>
+
+  <div class="sidebar">
+    <!-- Usuario -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Bienvenido</a>
+      </div>
+    </div>
+
+    <!-- Buscador -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Buscar..." aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        <!-- 🔐 Autenticación -->
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link">
+            <i class="nav-icon fas fa-sign-in-alt"></i>
+            <p>Iniciar Sesión</p>
+          </a>
+        </li>
+
+        <!-- 👨‍💼 Administrador -->
+        <li class="nav-header">Administrador</li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-users-cog"></i>
+            <p>Gestión Humana<i class="right fas fa-angle-left"></i></p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li><a routerLink="/admin/gh/registro-trabajador" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Registrar trabajador</p></a></li>
+            <li><a routerLink="/admin/gh/certificaciones" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Certificaciones</p></a></li>
+            <li><a routerLink="/admin/gh/validaciones" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Validaciones</p></a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-file-alt"></i>
+            <p>Área Administrativa<i class="right fas fa-angle-left"></i></p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li><a routerLink="/admin/admin/desprendibles" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Desprendibles</p></a></li>
+            <li><a routerLink="/admin/admin/reportes" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Reportes</p></a></li>
+            <li><a routerLink="/admin/admin/configuracion" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Configuración</p></a></li>
+          </ul>
+        </li>
+
+        <!-- 🧑‍🔧 Operario -->
+        <li class="nav-header">Operario</li>
+        <li><a routerLink="/operario/inicio" class="nav-link"><i class="nav-icon fas fa-user-cog"></i><p>Dashboard</p></a></li>
+        <li><a routerLink="/operario/solicitudes" class="nav-link"><i class="nav-icon fas fa-file-signature"></i><p>Solicitudes</p></a></li>
+        <li><a routerLink="/operario/desprendibles" class="nav-link"><i class="nav-icon fas fa-download"></i><p>Desprendibles</p></a></li>
+        <li><a routerLink="/operario/perfil" class="nav-link"><i class="nav-icon fas fa-id-card"></i><p>Perfil</p></a></li>
+
+        <!-- 🧑‍💻 Cliente -->
+        <li class="nav-header">Cliente</li>
+        <li><a routerLink="/cliente/pqrs" class="nav-link"><i class="nav-icon fas fa-envelope-open-text"></i><p>PQRS</p></a></li>
+        <li><a routerLink="/cliente/estado-pqrs" class="nav-link"><i class="nav-icon fas fa-search-location"></i><p>Estado PQRS</p></a></li>
+        <li><a routerLink="/cliente/servicios" class="nav-link"><i class="nav-icon fas fa-concierge-bell"></i><p>Servicios</p></a></li>
+        <li><a routerLink="/cliente/soporte" class="nav-link"><i class="nav-icon fas fa-headset"></i><p>Soporte</p></a></li>
+
+        <!-- 🧰 Módulos Técnicos -->
+        <li class="nav-header">Técnico</li>
+        <li><a routerLink="/maquinaria/listado" class="nav-link"><i class="nav-icon fas fa-industry"></i><p>Maquinaria</p></a></li>
+        <li><a routerLink="/inventario/listado" class="nav-link"><i class="nav-icon fas fa-boxes"></i><p>Inventario</p></a></li>
+        <li><a routerLink="/reportes/actividad" class="nav-link"><i class="nav-icon fas fa-chart-line"></i><p>Reportes</p></a></li>
+
+        <!-- ⚙️ Configuración -->
+        <li class="nav-header">Configuración</li>
+        <li><a routerLink="/configuracion/usuarios" class="nav-link"><i class="nav-icon fas fa-user-shield"></i><p>Usuarios</p></a></li>
+        <li><a routerLink="/configuracion/env" class="nav-link"><i class="nav-icon fas fa-code"></i><p>Variables .env</p></a></li>
+
+        <!-- 🧩 Extras -->
+        <li class="nav-header">Extras</li>
+        <li><a routerLink="/notificaciones" class="nav-link"><i class="nav-icon fas fa-bell"></i><p>Notificaciones</p></a></li>
+        <li><a routerLink="/busqueda" class="nav-link"><i class="nav-icon fas fa-search"></i><p>Buscador Global</p></a></li>
+        <li><a routerLink="/comentarios" class="nav-link"><i class="nav-icon fas fa-comments"></i><p>Comentarios</p></a></li>
+        <li><a routerLink="/auditoria/cambios" class="nav-link"><i class="nav-icon fas fa-user-secret"></i><p>Auditoría</p></a></li>
+        <li><a routerLink="/sincronizacion" class="nav-link"><i class="nav-icon fas fa-sync-alt"></i><p>Sincronización</p></a></li>
+
+      </ul>
+    </nav>
+  </div>
+</aside>
